@@ -1,0 +1,62 @@
+/* Media Queries */
+$breakpoint-xs: 360px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1300px;
+
+@mixin media($media) {
+    @if $media==xs {
+        @media (max-width: $breakpoint-sm) {
+            @content;
+        }
+    }
+
+    @else if $media==sm {
+        @media (min-width: $breakpoint-sm) {
+            @content;
+        }
+    }
+
+    @else if $media==md {
+        @media (min-width: $breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $media==lg {
+        @media (min-width: $breakpoint-lg) {
+            @content;
+        }
+    }
+}
+
+
+
+/* Social Icons */
+$sb: ".social-button";
+$networks: facebook,
+google,
+pinterest,
+whatsapp,
+twitter;
+
+$socialColors: (facebook: #3b5998,
+    google: #db4437,
+    pinterest: #c8232c,
+    whatsapp:#25D366,
+    twitter: #1da1f2);
+
+#{$sb} {
+    border: none;
+    border-radius: 4px;
+    color: $white;
+    user-select: none;
+    cursor: pointer;
+
+    // --> NETWORKS <--
+    @each $network in $networks {
+        &--#{network} {
+            background: map-get($socialColors, $network);
+        }
+    }
+}
