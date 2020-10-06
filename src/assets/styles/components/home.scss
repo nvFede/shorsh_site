@@ -1,14 +1,27 @@
 @import '../base/base';
 
 .main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 5em;
 
-    &__image {}
+
+    &__image {
+        width: 20%;
+    }
 
     &__title {}
 
-    &__paragraph {}
+    &__paragraph {
+        text-align: center;
+
+        &--react {
+            color: #61DBFB;
+            text-shadow: 1px 1px 1px darken(#61DBFB, 25);
+            /* React logo color */
+        }
+
+        &--sass {
+            color: #CD6799;
+            text-shadow: 1px 1px 1px darken(#CD6799, 25);
+            /* Sass logo color */
+        }
+    }
 }

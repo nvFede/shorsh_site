@@ -11,15 +11,35 @@
     height: 4em;
 
     padding: 0 5em;
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2);
+    color: $light-color;
 
     &__logo {
         &--title {}
+
+        a {
+            color: $light-color;
+            text-decoration: none;
+        }
     }
 
     &__navigation {
         &--item {
-            padding-left: 15px;
+            padding: 0.65em 0.85em;
             display: inline-block;
+
+            a {
+                color: $light-color;
+                text-decoration: none;
+            }
+
+            .is-selected {
+                border-bottom: 2px solid $light-color;
+            }
+
+            &:last-child {
+                background-color: $secondary-color;
+            }
         }
     }
 }
