@@ -1,35 +1,12 @@
-@import './utils/helpers';
+/* Usefull Sass Mixins */
 @import './utils/mixins';
+/* Media Queries configuration */
+@import './utils/media';
+/* Five Curated Fonts combination */
 @import './utils/fonts';
+/* Project Variables */
 @import './utils/variables';
+/* Curated color palletes */
 @import './utils/colors';
-
-
-/* 10px = 1em */
-html {
-    font-size: 62.5%;
-}
-
-body {
-    font-size: $default-font-size;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $main-font;
-}
-
-*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-    font-family: $alt-font;
-}
+/* some usefull helpers */
+@import './utils/helpers';

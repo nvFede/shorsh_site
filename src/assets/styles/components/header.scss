@@ -1,0 +1,25 @@
+@import "../base/base";
+
+.header {
+    width: 100%;
+    background: $primary-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 4em;
+
+    padding: 0 5em;
+
+    &__logo {
+        &--title {}
+    }
+
+    &__navigation {
+        &--item {
+            padding-left: 15px;
+            display: inline-block;
+        }
+    }
+}
