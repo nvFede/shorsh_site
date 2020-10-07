@@ -11,6 +11,11 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
+  devServer: {
+    overlay: true,
+    publicPath: '/',
+    historyApiFallback: true,
+  },
   module: {
     rules: [{
         test: /\.(js|jsx)$/,
