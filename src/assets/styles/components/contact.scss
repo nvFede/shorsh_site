@@ -9,6 +9,7 @@
     }
 
     .form {
+        width: 25em;
 
         * {
             border-radius: 0;
@@ -19,10 +20,14 @@
         &__message {
             padding: 1em;
             width: 100%;
-            margin-bottom: 1em;
+            margin-top: 1em;
 
         }
 
+        &__error {
+            color: $danger-color;
+
+        }
 
         &__button {
             background: $primary-color;

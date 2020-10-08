@@ -14,9 +14,9 @@ const initialState = {
 export default class Contact extends Component {
   state = initialState;
 
-  validEmail = (m) => {
+  validEmail = (mail) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(m.toLowerCase());
+    return re.test(mail.toLowerCase());
   };
 
   validate = () => {
@@ -27,7 +27,7 @@ export default class Contact extends Component {
     if (!this.state.name) {
       nameError = "name cannot be empty.";
     }
-    if (!validEmail(this.state.email)) {
+    if (!this.validEmail(this.state.email)) {
       emailError = "Please insert a valid email.";
     }
 
@@ -66,14 +66,14 @@ export default class Contact extends Component {
                 placeholder="name"
                 type="text"
               />
-              <div className="form__error">{this.state.nameError}</div>
+              <small className="form__error">{this.state.nameError}</small>
               <input
                 className="form__input"
                 name="email"
                 placeholder="email"
                 type="email"
               />
-              <div className="form__error">{this.state.emailError}</div>
+              <small className="form__error">{this.state.emailError}</small>
               <textarea
                 className="form__message"
                 name="message"
@@ -81,7 +81,7 @@ export default class Contact extends Component {
                 cols="30"
                 rows="10"
               ></textarea>
-              <div className="form__error">{this.state.messageError}</div>
+              <small className="form__error">{this.state.messageError}</small>
               <input className="form__button" type="submit" value="Send" />
             </form>
           </div>
