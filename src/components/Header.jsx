@@ -12,7 +12,7 @@ export default class Header extends Component {
       <Fragment>
         <header className="header">
           <div className="header__logo">
-            <Link exact to="/">
+            <Link to="/">
               <h1 className="header__logo--title">Logo</h1>
             </Link>
           </div>
@@ -24,12 +24,12 @@ export default class Header extends Component {
                 </NavLink>
               </li>
               <li className="header__navigation--item">
-                <NavLink to="/about" activeClassName="is-selected">
+                <NavLink exact to="/about" activeClassName="is-selected">
                   About
                 </NavLink>
               </li>
               <li className="header__navigation--item">
-                <NavLink to="/contact" activeClassName="is-selected">
+                <NavLink exact to="/contact" activeClassName="is-selected">
                   Contact
                 </NavLink>
               </li>
