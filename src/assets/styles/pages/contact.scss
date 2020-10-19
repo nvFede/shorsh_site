@@ -1,0 +1,46 @@
+@import "../base/base";
+
+.main {
+    width: 900px;
+    margin: 0 auto;
+
+    h1 {
+        margin-bottom: 1em;
+    }
+
+    .form {
+        width: 25em;
+
+        * {
+            border-radius: 0;
+            ;
+        }
+
+        &__input,
+        &__message {
+            padding: 1em;
+            width: 100%;
+            margin-top: 1em;
+            border: 1px solid $primary-color;
+        }
+
+        &__error {
+            color: $danger-color;
+
+        }
+
+        &__success {
+            color: $success-color;
+            margin-top: 10px;
+        }
+
+        &__button {
+            background: $secondary-color;
+            color: $light-color;
+            padding: 1em 2em;
+            width: 100%;
+            border: none;
+        }
+
+    }
+}
